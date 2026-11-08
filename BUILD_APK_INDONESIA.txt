@@ -1,0 +1,28 @@
+CARA BUILD APK ASERVER 1.4.0
+============================
+
+PAKET INI HANYA ASERVER.
+Tidak ada source atau APK aplikasi target lain di dalam ZIP ini dan tidak ada perubahan yang diterapkan ke APK target.
+
+CARA BUILD MELALUI GITHUB
+1. Buat repository baru di GitHub.
+2. Upload seluruh isi folder ASERVER ke root repository (termasuk .github/workflows/android.yml).
+3. Buka tab Actions.
+4. Pilih workflow "Build ASERVER APK".
+5. Tekan Run workflow.
+6. Setelah sukses, download artifact "ASERVER-debug-APK-v1.5.0".
+7. Ekstrak artifact dan instal app-debug.apk di Android.
+
+FITUR ASERVER
+- Foreground service dengan notifikasi persisten.
+- START_STICKY dan percobaan start setelah boot.
+- Partial CPU wakelock serta Wi-Fi lock yang dapat diatur.
+- Pemilih aplikasi, tombol buka, dan shortcut setelan aplikasi Android.
+- Monitor endpoint lokal dan URL publik setiap 15 detik.
+- Status hasil pemeriksaan kedaluwarsa bila tidak diperbarui selama 45 detik.
+- Pengecualian optimasi baterai untuk ASERVER.
+
+PENTING
+ASERVER dapat menjaga dirinya sendiri dan memeriksa alamat server. ASERVER tidak dapat mengunci atau menjamin proses APK lain tetap hidup dari luar APK tersebut. Atur baterai untuk setiap aplikasi target secara terpisah. Doze, Force stop, kebijakan pabrikan, panas, dan kondisi perangkat tetap dapat menghentikan layanan.
+
+Build menggunakan Java 17, Android SDK 35, Android Gradle Plugin 8.7.3, dan Gradle 8.9.
